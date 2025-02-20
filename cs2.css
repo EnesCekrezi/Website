@@ -7,25 +7,40 @@ body, ul, li {
 }
 
 :root {
-    --background-color: #333; /* Dark theme background */
-    --text-color: #fff; /* Dark theme text color */
-    --nav-bg-color: #333; /* Nav bar background in dark theme */
-    --nav-text-color: #fff; /* Nav bar text in dark theme */
-    --button-bg-color: #fff; /* Button background in dark theme */
-    --button-text-color: #333; /* Button text in dark theme */
-    --button-hover-bg-color: #333; /* Button hover background in dark theme */
-    --button-hover-text-color: #fff; /* Button hover text in dark theme */
+    --background-color:#333;
+    --text-color:white;
+    --nav-color:#333;
+    --container-text-color: white;
+    --container-background-color:rgba(0, 0, 0, 0.5);
+    --feature-box-color:#444;
+    --text-container-text-color:white;
+    --text-container1-color:rgba(0, 0, 0, 0.5);
+    --button-color:white;
+    --button-text-color:black;
+    --footer-color:#444;
+    --p-info-color:white;
+    --skin-color:white;
+    --title-color:white;
+    --join-color:white;
   }
   
   [data-theme="light"] {
-    --background-color: #f4f4f4; /* Light theme background */
-    --text-color: #333; /* Light theme text color */
-    --nav-bg-color: #fff; /* Nav bar background in light theme */
-    --nav-text-color: #333; /* Nav bar text in light theme */
-    --button-bg-color: #333; /* Button background in light theme */
-    --button-text-color: #fff; /* Button text in light theme */
-    --button-hover-bg-color: #333; /* Button hover background in light theme (no change) */
-    --button-hover-text-color: #fff; /* Button hover text in light theme (no change) */
+
+    --background-color:white;
+    --text-color:white;
+    --nav-color:#007bff;
+    --container-text-color: white;
+    --container-background-color:rgba(255, 255, 255, 0.223);
+    --feature-box-color:#007bff;
+    --text-container-text-color: ;
+    --text-container1-color:rgba(255, 255, 255, 0.223);
+    --button-color: #007bff;
+    --button-text-color:white;
+    --footer-color: #007bff;
+    --p-info-color:black;
+    --skin-color:black;
+    --title-color: black;
+    --join-color:black;
   }
   
   body {
@@ -34,10 +49,9 @@ body, ul, li {
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   }
 
-/* Navbar styles */
-/* Nav bar styles */
+
 .nav-bar {
-    background-color: var(--nav-bg-color);
+    background-color: var(--nav-color);
     padding: 1rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -57,7 +71,7 @@ body, ul, li {
   }
   
   .nav-bar .list-item li {
-    color: white var(--nav-text-color);
+    color: white;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -66,13 +80,16 @@ body, ul, li {
   }
   
   .nav-bar .list-item li:hover {
-    background-color: #555; /* Keep hover effect in dark theme */
+    background-color: white; 
     border-radius: 8px;
   }
 
 
 
-/* From Uiverse.io by cuzpq */ 
+
+
+
+
 .theme-checkbox {
     --toggle-size: 10px;
     -webkit-appearance: none;
@@ -81,8 +98,8 @@ body, ul, li {
     width: 6.25em;
     height: 3.125em;
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
-    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: -o-linear-gradient(left, #007bff 50%, #ffffff 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #ffffff 50%) no-repeat;
     background-size: 205%;
     background-position: 0;
     -webkit-transition: 0.4s;
@@ -101,9 +118,9 @@ body, ul, li {
     position: absolute;
     top: 0.438em;
     left: 0.438em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #8c2b2b), color-stop(50%, #bb3737)) no-repeat;
     background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
-    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #007bff 50%, #2a2a2a 50%) no-repeat;
     background-size: 205%;
     background-position: 100%;
     border-radius: 50%;
@@ -121,7 +138,12 @@ body, ul, li {
     background-position: 100%;
   }
 
-/* Button position fixed to the right side */
+
+
+
+
+
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -182,9 +204,9 @@ a{
     right: 100px;
     transform: translateY(-50%);
     z-index: 2;
-    color: rgb(255, 255, 255);
+    color: var(--container-text-color);
     text-align: right;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--container-background-color);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -198,6 +220,7 @@ a{
 
 
 .p-info {
+    color: var(--p-info-color);
     font-size: 1.2rem;
     line-height: 1.8;
     margin: 2rem auto;
@@ -226,11 +249,11 @@ a{
 }
 
 .feature-box {
-    background-color: #555;
+    background-color: var(--feature-box-color);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: var(--feature-color);
     text-align: left;
 }
 
@@ -258,9 +281,9 @@ a{
     right: 400px;
     transform: translateY(-50%);
     z-index: 2;
-    color: rgb(255, 255, 255);
+    color: var(--text-container1-text-color);
     text-align: right;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--text-container1-color);
     
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -272,10 +295,12 @@ a{
 }
 
 .skin-title{
+    color: var(--title-color);
     font-size: 40px;
 }
 
 .skin-description{
+    color: var(--skin-color);
     font-size: 1.2rem;
     line-height: 1.8;
     margin: 2rem auto;
@@ -314,15 +339,16 @@ a{
 
 
 .join-us{
+    color: var(--join-color);
     margin-top: 60px;
     font-size: 30px;
 }
 
 .market-button {
-    border-color: #333;
+    border-color: white;
     font-size: 25px;
     border-radius: 15px;
-    background-color: var(--button-bg-color);
+    background-color: var(--button-color);
     color: var(--button-text-color);
     margin-top: 20px;
     padding: 15px 80px;
@@ -330,10 +356,7 @@ a{
     transition: background-color 0.3s, color 0.3s;
   }
 
-  [data-theme="dark"] .market-button:hover {
-    background-color: var(--button-hover-bg-color);
-    color: var(--button-hover-text-color);
-  }
+
 
 .market-button:hover{
     background-color: #333;
@@ -342,7 +365,7 @@ a{
 }
 
 footer {
-    background-color: #444;
+    background-color: var(--footer-color);
     color: white; 
     padding: 2rem 0; 
     text-align: center; 
